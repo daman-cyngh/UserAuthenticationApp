@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/lLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/txtVerifyEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Not Verified!!"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="verify now"
+            android:id="@+id/btnVerifyNow"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="#8BC34A"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_margin="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lLayout1"
+        android:layout_below="@id/lLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" >
+
+            <ImageView
+                android:layout_margin="6dp"
+                android:padding="6dp"
+                android:id="@+id/imgNameIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_name"/>
+
+            <TextView
+                android:layout_toRightOf="@id/imgNameIcon"
+                android:id="@+id/txtNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:textSize="18sp"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_toRightOf="@id/imgNameIcon"
+                android:layout_below="@id/txtNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" >
+
+            <ImageView
+                android:layout_margin="6dp"
+                android:padding="6dp"
+                android:id="@+id/imgEmailIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_email"/>
+
+            <TextView
+                android:id="@+id/txtEmailLabel"
+                android:layout_toRightOf="@id/imgEmailIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="18sp"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_toRightOf="@id/imgEmailIcon"
+                android:layout_below="@+id/txtEmailLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Email"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:textColor="#ffffff"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:layout_margin="6dp"
+                android:padding="6dp"
+                android:id="@+id/imgPhoneIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_phone"/>
+
+            <TextView
+                android:id="@+id/txtPhoneLabel"
+                android:layout_toRightOf="@id/imgPhoneIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:textSize="18sp"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:id="@+id/txtPhoneNumber"
+                android:layout_toRightOf="@id/imgPhoneIcon"
+                android:layout_below="@+id/txtPhoneLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Mobile Number"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="3dp"
+                android:padding="6dp"
+                android:textColor="#ffffff"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_above="@+id/btnExit">
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#BD959D"
+            android:padding="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:text="Change Password"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnChangeProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFBD959D"
+            android:padding="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:text="Change Profile"
+            android:layout_marginBottom="12dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="logout"
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sign out"
+        android:textColor="#ffffff"
+        android:background="#FFBD959D"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
